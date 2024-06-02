@@ -1,0 +1,74 @@
+.expertise {
+  padding: 40px 0 100px;
+  background-color: $teal;
+}
+// Text
+.expertise-text__h2 {
+  text-align: center;
+  font-size: 36px;
+  color: $white;
+}
+.expertise-text__content {
+  margin-bottom: 100px;
+}
+// Accordion
+.expertise-text__accordion {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+.accordion {
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+.accordion-btn {
+  background: none;
+  padding: 40px 200px;
+  background-color: $black;
+  max-width: 400px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+.accordion-btn__title {
+  color: $white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.accordion-details {
+  max-height: 0;
+  margin: 4px 0 0 0;
+  overflow: hidden;
+  display: flex;
+  transition: all 0.4s ease-in-out;
+  background-color: $charcoal;
+  color: $white;
+  border-radius: 4px;
+}
+.accordion-details__p {
+  padding: 10px;
+}
+.accordion--open {
+  .accordion-details {
+    max-height: 200px;
+  }
+}
+//Media Query
+@include Tablet {
+  .accordion-btn {
+    padding: 40px 160px;
+  }
+}
+@include Mobile {
+  .accordion-btn__title {
+    font-size: 16px;
+  }
+  .accordion-btn {
+    padding: 30px 0;
+    height: 30px;
+    width: 100%;
+  }
+}
